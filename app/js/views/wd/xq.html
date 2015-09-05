@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="css/wdxq.css" type="text/css"/>
+<div class="cont">
+	<ul class="list-box">
+		<li>
+		<dl>
+			<dt class="search-key-img">
+			<img ng-src="{{branch.branch_logo}}">
+			</dt>
+			<dd class="search-key-title">
+			<p id="wd-name">{{branch.branch_name}}</p>
+			</dd>
+			<dd class="search-key-info">
+			<p class="xx">
+				<i></i><i></i><i></i>
+			</p>
+			</dd>
+			<dd class="search-key-tag">
+			<p class='wd-data' id="wd-tpye">{{branch.branch_type}}</p>
+			</dd>
+		</dl>
+		</li>
+		<li>
+			<!--location-->
+			<img src="images/dingwei.png" class="one-con-left-img">
+			<img src="images/xiala.png" class="one-con-right-img">
+			<p class="one-con" id="wd-adr">{{branch.branch_adr}}</p>
+		</li>
+		<li>
+			<!--telephone-->
+			<img src="images/tel.png" class="one-con-left-img">
+			<img src="images/xiala.png" class="one-con-right-img">
+			<p class="one-con tel" id="wd-tel">{{branch.branch_tel}}</p>
+		</li>
+	</ul>
+	<ul>
+		<!--wangdian info-->
+	</ul>
+	<ul class="list-box" id="wd-list">
+		<li>
+			<p class="list-title">
+				附近优惠
+			</p>
+		</li>
+		<li data-ng-repeat="item in branch.shop.items">
+			<a href="#/xx">
+			<dl>
+				<dt class="search-key-img">
+				<img data-ng-src="{{item.shop_logo}}">
+				</dt>
+				<dd class="search-key-title">
+				<p class='wd-name'>{{item.shop_name}}</p>
+				</dd>
+		</li>
+	</ul>

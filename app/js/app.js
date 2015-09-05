@@ -1,23 +1,20 @@
-/*App Module*/
-
-var myapp = angular.module('bookstore', [
-	'ngRoute', 
-	'ngAnimate',
-	'bookstoreControls'
+var PingAn = angular.module('PingAn',[
+		'ngRoute',
+		'appCtrl'
 	]);
 
-myapp.config(['$routeProvider',
-	function($routeProvider){
-	$routeProvider.
-		when('/hello',{
-			templateUrl:'partials/hellobookstore.html',
-			controller:'helloControl'
-		}).
-		when('/list',{
-			templateUrl:'partials/booklist.html',
-			controller:'boollistControl'
-		}).
-		otherwise({
-			redirectTo:'/hello'
-		});
-}]);
+PingAn.config(['$routeProvider',
+	function($routeProvider) {
+		$routeProvider
+		.when('/',{
+			templateUrl:'js/views/wd/list.html',
+			controller:'wdListCtrl'
+		})
+		.when('/wdxq',{
+			templateUrl:'js/views/wd/xq.html',
+			controller: 'wdXqCtrl'
+		})
+		.otherwise({
+			redirectTo:'/'
+		});	
+}])
